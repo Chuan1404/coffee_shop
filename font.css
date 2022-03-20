@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Rb';
+    src: url('font/Roboto-Bold.woff2') format('woff2'),
+        url('font/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Rr';
+    src: url('font/Roboto-Regular.woff2') format('woff2'),
+        url('font/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Peb';
+    src: url('font/ProximaNovaA-Extrabld.woff2') format('woff2'),
+        url('font/ProximaNovaA-Extrabld.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Pb';
+    src: url('font/ProximaNova-Bold.woff2') format('woff2'),
+        url('font/ProximaNova-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Pr';
+    src: url('font/ProximaNova-Regular.woff2') format('woff2'),
+        url('font/ProximaNova-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Mb';
+    src: url('font/Montserrat-Bold.woff2') format('woff2'),
+        url('font/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Mm';
+    src: url('font/Montserrat-Medium.woff2') format('woff2'),
+        url('font/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Msb';
+    src: url('font/Montserrat-SemiBold.woff2') format('woff2'),
+        url('font/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Nn';
+    src: url('font/Nickainley-Normal.woff2') format('woff2'),
+        url('font/Nickainley-Normal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Pc';
+    src: url('font/Pacifico-Regular.woff2') format('woff2'),
+        url('font/Pacifico-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Mbl';
+    src: url('font/Montserrat-Black.woff2') format('woff2'),
+        url('font/Montserrat-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'S';
+    src: url('font/Scripture.woff2') format('woff2'),
+        url('font/Scripture.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+
+
+

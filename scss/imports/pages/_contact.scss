@@ -1,0 +1,279 @@
+
+#contact {
+    main {
+        overflow: hidden;
+        section {
+            background-color: black;
+        }
+        .banner {
+            .box {
+                text-align: center;
+                strong {
+                    font-size: 80px;
+                    transform: translateY(90px) scale(0);
+                    &.show {
+                        transform: translateY(0) scale(1);
+                    }
+                }
+                h2 {
+                    font-size: 90px;
+                    margin: 20px 0;
+                    transform: scaleX(2);
+                    opacity: 0;    
+                    &.show {
+                        transform: scaleX(1) translateY(0);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .branch {
+            position: relative;
+            z-index: 2;
+            clear: both;
+            padding-bottom: 50px;
+            .container {
+                .grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto auto;
+                    gap: 50px;
+                    &_item {
+                        &.main {
+                            grid-column: 1/3;
+                            .grid_item-img {
+                                height: calc(100vh - var(--nav_line));
+                            }
+                        }
+                        &-img {
+                            position: relative;
+                            height: 400px;
+                            width: 100%;
+                            overflow: hidden;
+                            transition: $t;
+                            &.show {
+                                &::after {
+                                    height: 0;
+                                }
+                            }
+                            &::after {
+                                content: "";
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                background-color: $black-cl;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                transition: height .4s cubic-bezier(0.13, 0.35, 0.93, 0.08);
+                            }
+                            img {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50% , -50%);
+                                object-fit: cover;
+                                min-width: 100%;
+                                min-height: 100%;
+                            }
+                        }
+                        &-box {
+                            color: white;
+                            h3 {
+                                width: 100%;
+                                color: white;
+                                height: 80px;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                            a {
+                                border: 1px solid #c7a17a;
+                                font-family: Pb;
+                                color: #c7a17a;
+                                &:hover {
+                                    color:white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .form {
+            position: relative;
+            height: 800px;
+            &_box {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 600px;
+                margin: auto;
+                z-index: 2;
+                &-text {
+                    margin-bottom: 100px;
+                    .h2_contact {
+                        color: white;
+                        font-size: 90px;
+                        strong {
+                            color: $hover-cl;
+                        }
+                    }
+                    p {
+                        color: white;
+                        font-size: 23px;
+                        line-height: 1.5;
+                        font-family: Pb;
+                        text-transform: uppercase;
+                    }
+                }
+                &-inputs {
+                    .item {
+                        label {
+                            color: white;
+                            font-family: Pr;
+                            font-size: 20px;
+                        }
+                        input, textarea {
+                            width: 100%;
+                            background-color: transparent;
+                            border: none;
+                            border-bottom: 1px solid white;
+                            margin-bottom: 10px;
+                            margin-top: 20px;
+                            color: white;
+                            font-size: 20px;
+                            font-family: Rr;
+                            outline: none;
+                        }
+                        input {
+                            height: 40px;
+                            &[type="submit"] {
+                                background-color: white;
+                                width: 100px;
+                                font-weight: bold;
+                                color: $text-cl;
+                            }
+                        }
+                        textarea {
+                            height: 80px;
+                            resize: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 991px) {
+        --bgHeight: 170px;
+        main {
+            .banner {
+                .box {
+                    h2 {
+                        font-size: 70px;
+                    }
+                    strong {
+                        font-size: 50px;
+                    }
+                }
+            }
+            .branch {
+                .container {
+                    .grid {
+                        gap: 30px;
+                        
+                    }
+                }
+            }
+            .form {
+                height: 700px;
+                &_box {
+                    &-text {
+                        margin-bottom: 50px;
+                        .h2_contact {
+                            font-size: 60px;
+                            strong {
+                                font-size: 32px;
+                            }
+                        }
+                        p {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        main {
+            .banner {
+                .box {
+                    h2 {
+                        font-size: 50px;
+                    }
+                    strong {
+                        font-size: 40px;
+                    }
+                }
+            }
+            .branch {
+                .container {
+                    .grid {
+                        grid-template-columns: 1fr;
+                        grid-template-rows: initial;
+                        &_item {
+                            &.main {
+                                grid-column: initial;
+                                .grid_item-img {
+                                    height: 500px;
+                                }
+                            }
+                            &-box {
+                                text-align: center;
+                                h3 {
+                                    height: 60px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .form {
+                height: 600px;
+                &_box {
+                    width: 100%;
+                    &-text {
+                        margin-bottom: 30px;
+                        .h2_contact {
+                            font-size: 50px;
+                            margin-bottom: 20px;
+                        }
+                        p {
+                            font-size: 16px;
+                            text-align: center;
+                        }
+                    }
+                    &-inputs {
+                        .item {
+                            label {
+                                font-size: 15px;
+                            }
+                            input {
+                                height: 28px;
+                                &[type="submit"] {
+                                    font-size: 15px;
+                                }
+                            }
+                            textarea {
+                                height: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

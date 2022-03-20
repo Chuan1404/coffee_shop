@@ -1,0 +1,90 @@
+  /* FONT FACE - font-display: fallback; */
+@font-face {
+    font-family: 'Rb';
+    src: url('font/Roboto-Bold.woff2') format('woff2'),
+        url('font/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Ri';
+    src: url('font/Roboto-Italic.woff2') format('woff2'),
+        url('font/Roboto-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Rl';
+    src: url('font/Roboto-Light.woff2') format('woff2'),
+        url('font/Roboto-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Rr';
+    src: url('font/Roboto-Regular.woff2') format('woff2'),
+        url('font/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Rt';
+    src: url('font/Roboto-Thin.woff2') format('woff2'),
+        url('font/Roboto-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Peb';
+    src: url('font/ProximaNovaA-Extrabld.woff2') format('woff2'),
+        url('font/ProximaNovaA-Extrabld.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Pb';
+    src: url('font/ProximaNova-Bold.woff2') format('woff2'),
+        url('font/ProximaNova-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Pr';
+    src: url('font/ProximaNova-Regular.woff2') format('woff2'),
+        url('font/ProximaNova-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'S';
+    src: url('font/Scripture.woff2') format('woff2'),
+        url('font/Scripture.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Ssa';
+    src: url('font/SweetBelly-Sans.woff2') format('woff2'),
+        url('font/SweetBelly-Sans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Ssc';
+    src: url('font/SweetBelly-Script.woff2') format('woff2'),
+        url('font/SweetBelly-Script.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}

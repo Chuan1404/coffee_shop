@@ -1,0 +1,160 @@
+// css button, title, icon, elements...
+img {
+    max-width: 100%;
+}
+.words {
+    font-family: Rr;
+    color: $white-cl;
+    span {
+        text-transform: uppercase;
+        font-size: 15px;
+        letter-spacing: 4px;
+        display: block;
+    }
+    h2 {
+        text-transform: uppercase;
+        font-size: 65px;
+        margin: 30px 0;
+    }
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+    .sign {
+        font-family: S;
+        font-size: 50px;
+        text-transform: capitalize;
+    }
+    strong {
+        font-family: Pc;
+        text-transform: capitalize;
+        font-size: 60px;
+        color: $hover-cl;
+        display: block;
+        transform:translateY(100px) scale(0);
+        transition: $t;
+        transition-delay: $t;
+        &.show {
+            transform:translateY(0) scale(1);
+        }
+    }
+    @media (max-width: 991px) {
+        h2 {
+            font-size: 50px;
+        }
+        a {
+            padding: 15px 50px;
+        }
+        strong {
+            font-size: 50px;
+        }
+    }
+    @media (max-width: 767px) {
+        span {
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-size: 40px;
+            margin: 20px 0;
+        }
+        strong {
+            font-size: 40px;
+        }
+    }
+    @media (max-width: 575px) {
+        text-align: center;
+        h2 {
+            font-size: 30px;
+        }
+        span {
+            font-size: 12px;
+        }
+        strong {
+            font-size: 30px;
+        }
+    }
+}
+.a-btn {
+    color: $white-cl;
+        text-decoration: none;
+        font-size: 15px;
+        text-transform: uppercase;
+        border: 1px solid white;
+        padding:20px 80px;
+        transition: $t;
+        display: inline-block;
+        transform: scale(1);
+        &:hover {
+            background-color: $hover-cl;
+        }
+}
+// nav
+.color-white {
+    color: white;
+    &::after {
+        background-color: white;
+    }
+}
+.color-black {
+    color: $text-cl;
+    &::after {
+        background-color: $text-cl;
+    }
+}
+.color-hover {
+    color: $hover-cl;
+    &::after {
+        background-color: $hover-cl;
+    }
+}
+.nav-back-main {
+    background-color: $main-cl;
+    border-bottom: 1px solid $text-cl;
+}
+.nav-back-black {
+    background-color: #000;
+    border-bottom: 1px solid white;
+}
+._3dots-white {
+    span {
+        background-color: white
+    }
+}
+._3dots-black {
+    span {
+        background-color: $text-cl;
+    }
+}
+// keyframe
+@keyframes zoom {
+    0% {
+        transform: translate(-50% , -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50% , -50%) scale(2);
+    }
+    100% {
+        transform: translate(-50% , -50%) scale(1);
+    }
+}
+@keyframes text_run {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
+@keyframes coffee {
+    0% {
+        background-position: 0px 150px;
+    }
+    50% {
+        background-position: -650px 100px;
+    }
+    100% {
+        background-position: -1500px -50px;
+    }
+}

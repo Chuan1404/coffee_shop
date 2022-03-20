@@ -1,0 +1,421 @@
+#about {
+    main {
+        overflow: hidden;
+        --nav_line: 100px;
+        .banner {
+            .box {
+                text-align: center;
+                strong {
+                    position: relative;
+                    font-size: 80px;
+                    transform: translateY(90px) scale(0);
+                    &::before {
+                        content: "*";
+                        position: absolute;
+                        top: -50px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    &.show {
+                        transform: translateY(0) scale(1);
+                    }
+                }
+                h2 {
+                    font-size: 90px;
+                    margin: 20px 0;
+                    transform: scaleX(2);
+                    opacity: 0;    
+                    &.show {
+                        transform: scaleX(1) translateY(0);
+                        opacity: 1;
+                    }
+                }
+                span {
+                    font-size: 30px;
+                    opacity: 0;
+                    transform: translateY(0);
+                    &::after , &::before {
+                        content: "*";
+                    }
+                    &::after {
+                        margin-left: 10px;
+                    }
+                    &::before {
+                        margin-right: 10px;
+                    }
+                    &.show {
+                        opacity: 1;
+                    }
+                }
+                strong , h2 , span {
+                    transition: $t;
+                }
+            }
+        }
+        .history {
+            clear: both;
+            overflow: hidden;
+            position: relative;
+            padding-bottom: var(--bgHeight);
+            margin-bottom: -1px;
+            .container {
+                position: relative;
+                &::after {
+                    content: "";
+                    display: block;
+                    width:2px;
+                    height: calc(100% - 2* var(--padding));
+                    background-color: $hover-cl;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50% , -50%);
+                }
+            }
+            &_bg {
+                div {
+                    width: 200px;
+                    height: 200px;
+                    position: absolute;
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                        fill: #000;
+                        opacity: .7;
+                    }
+                    &:first-child {
+                        width: 400px;
+                        height: 400px;
+                        top: 5%;
+                        right: 5%;
+                        transform: rotate(-40deg);
+                    }
+                    &:last-child {
+                        bottom: 5%;
+                        left: 20%;
+                    }
+                }
+            }
+        }
+        .story {
+            background-color: $black-cl;
+            position: relative;
+            margin-top: -1px;
+            .container {
+                .flex_group {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 600px;
+                    margin: 50px 0;
+                    .item {
+                        width: 40%;
+                        height: 100%;
+                        position: relative;
+                        color: $white-cl;
+                        &.show {
+                            &::after {
+                                height: 0;
+                            }
+                        }
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            transition: height .4s cubic-bezier(0.13, 0.35, 0.93, 0.08);
+                            z-index: 2;
+                            background-color: black;
+                        }
+                        &.scroll_text {
+                            width: 55%;
+                            p {
+                                position: absolute;
+                                bottom: -100px;
+                                left: -50px;
+                                font-family: Rb;
+                                font-size: 90px;
+                                text-transform: uppercase;
+                                max-width: 400px;
+                            }
+                        }
+                        img {
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        p {
+                            font-family: Rr;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+        .philosophy {
+            position: relative;
+            padding-top: var(--bgHeight);
+            .container {
+                position: relative;
+                h3 {
+                    color: $text-cl;
+                    &::after {
+                        display: none;
+                    }
+                }
+                .philosophy_box {
+                    width: 70%;
+                    display: flex;
+                    justify-content: space-between;
+                    .text {
+                        max-width: 330px;
+                        margin-right: 15px;
+                        align-self: center;
+                        p {
+                            letter-spacing: 2px;
+                            opacity: 1;
+                            font-size: 16px;
+                        }
+                    }
+                    .img {
+                        width: 400px;
+                        height: 600px;
+                        position: relative;
+                        overflow: hidden;
+                        img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            min-width: 100%;
+                            min-height: 100%;
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .contact_box {
+                    background-color: black;
+                    position: absolute;
+                    width:500px;
+                    padding: 50px;
+                    top: 120px;
+                    right: 0;
+                    h3 {
+                        color: $white-cl;
+                    }
+                    p {
+                        margin: 30px 0;
+                        color: $white-cl;
+                    }
+                    a {
+                        border: 1px solid $hover-cl;
+                        font-family: Pb;
+                        color: $hover-cl;
+                        &:hover {
+                            color: $white-cl;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 991px) {
+        --bgHeight: 170px;
+        main {
+            .banner {
+                .box {
+                    h2 {
+                        font-size: 60px;
+                    }
+                    strong {
+                        font-size: 60px;
+                    }
+                    span {
+                        font-size: 25px;
+                    }
+                }
+            }
+            .history {
+                &_bg {
+                    div {
+                        width: 150px;
+                        height: 150px;
+                        &:first-child {
+                            width: 200px;
+                            height: 200px;
+                        }
+                        &:last-child {
+                            left: 10%;
+                        }
+                    }
+                }
+            }
+            .story {
+                .container {
+                    .flex_group {
+                        height: 550px;
+                        margin: 50px 0;
+                        &:last-child {
+                            height: 450px;
+                            .item {
+                                width: 45%;
+                            }
+                        }
+                        .item {             
+                            &.scroll_text {
+                                p {
+                                    font-size: 70px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .philosophy {
+                .container {
+                    .philosophy_box {
+                        width: 90%;
+                        justify-content: initial;
+                        .text {
+                            max-width: 250px;
+                            margin-right: 0;
+                        }
+                        .img {
+                            width: 300px;
+                            height: 500px;
+                        }
+                    }
+                    .contact_box {
+                        top: initial;
+                        bottom: 120px;
+                        width: 400px;
+                        padding: 30px;
+                        h3 {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        main {
+            .banner {
+                .box {
+                    h2 {
+                        font-size: 50px;
+                    }
+                    strong {
+                        font-size: 50px;
+                    }
+                    span {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .story {
+                .container {
+                    .flex_group {
+                        flex-direction: column;
+                        height: auto;
+                        &:last-child {
+                            height: auto;
+                            .item {
+                                width: 100%;
+                            }
+                        }
+                        .item {
+                            width: 100%;
+                            animation: none !important;
+                            margin-bottom: 30px;
+                            &.scroll_text {
+                                display: none;
+                            }
+                            &.tran-50-25 {
+                                transform: translate(0,0) !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .philosophy {
+                .container {
+                    .philosophy_box {
+                        width: 100%;
+                        flex-direction: column;
+                        .text {
+                            max-width: 100%;
+                            text-align: center;
+                        }
+                    }
+                    .contact_box {
+                        bottom: initial;
+                        top: 100px;
+                        transform: translateX(50%);
+                    }
+                }
+            }
+            .history {
+                &_bg {
+                    div {
+                        width: 120px;
+                        height: 120px;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 575px) {
+        main {
+            .story {
+                .container {
+                    .flex_group {
+                        .item:not(img) {
+                            padding: 0 10px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            .philosophy {
+                .container {
+                    .philosophy_box {
+                        .img {
+                            width: 100%;
+                        }
+                    }
+                    .contact_box {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        position: relative;
+    }
+    .popup {
+        pointer-events: visible;
+        &_box {
+            position: relative;
+            padding-top: 50%;
+            width: 80%;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        @media (max-width: 767px) {
+            &_box {
+                padding-top: 56.25%;
+            }
+        }
+    }
+}

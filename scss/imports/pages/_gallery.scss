@@ -1,0 +1,454 @@
+#gallery {
+    main {
+        .bannerS {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            max-width: 100%;
+            overflow: hidden;
+            background-color: black;
+            &_box {
+                position: absolute;
+                top: 50%;
+                left: 50px;
+                z-index: 2;
+                transform: translateY(-50%);
+                &-item {
+                    color: white;
+                    .h2 , .p {
+                        width: 100vw;
+                        height: 100px;
+                        overflow: hidden;
+                        position: relative;
+                        h2 , p {
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            transition: .3s;
+                            &.active {
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    .h2 {
+                        h2 {
+                            font-family: Pb;
+                            font-size: 60px;
+                            text-transform: uppercase;
+                        }
+                    }
+                    .p {
+                        max-width: 600px;
+                        p {
+                            font-family: Pr;
+                            font-size: 20px;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+            &_img {
+                width: 100%;
+                
+                overflow: hidden;
+                transition: 0.6s ease-out;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,.2);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                &-item {
+                    width: 100%;
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .box-img {
+                        width: 80%;
+                        height: 80%;
+                        overflow: hidden;
+                        position: relative;
+                        transition: $t ease-out;
+                        transition-delay: 0.2s;
+                        &.active {
+                            width: 100%;
+                            height: 100%;
+                            transition-delay: 0s;
+                        }
+                        &.small {
+                            width: 70%;
+                            height: 70%;
+                            transition-delay: 0s;
+                        }
+                        img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50% , -50%);
+                            object-fit: cover;
+                            min-width: 100%;
+                            min-height: 100%;
+                        }
+                    }
+                }
+            }
+            &_control {
+                position: absolute;
+                top: 50%;
+                right: 30px;
+                transform: translateY(-50%);
+                z-index: 2;
+                &-btn {
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                    &.next {
+                        transform: rotate(90deg);
+                    }
+                    &.prev {
+                        transform: rotate(-90deg);
+                        margin-bottom: 20px;
+                    }
+                    &.none {
+                        pointer-events: none;
+                        visibility: hidden;
+                    }
+                   svg {
+                        width: 100%;
+                        height: 100%;
+                       fill: white;
+                   }
+                }
+            }
+        }
+        .nature {
+            position: relative;
+            &_img {
+                height: 100vh;
+                width: 100vw;
+                max-width: 100%;
+                position: relative;
+                overflow: hidden;
+                background-image: url(../img/28.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                .box {
+                    position: absolute;
+                    top: 30%;
+                    margin: auto;
+                    text-transform: capitalize;
+                    z-index: 3;
+                    font-family: Pb;
+                    color: white;
+                    text-align: center;
+                    max-width: 70%;
+                    p {
+                        font-size: 60px;
+                        margin-bottom: 50px;
+                    }
+                    span {
+                        font-size: 25px;
+                        font-family: Pr;
+                    }
+                }
+                &-bg {
+                    position: absolute;
+                    width: 100%;
+                    bottom: -10px;
+                    z-index: 4;
+                    img {
+                        width: 100%;
+                    }
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,0.2);
+                    
+                }
+            }
+            &_cup {
+                position: absolute;
+                width: 400px;
+                height: 500px;
+                bottom: 0;
+                right: 0;
+                z-index: 5;
+                transform: translateY(10%);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .album {
+            padding-top: 100px;
+            .container-fluid {
+                .album_title {
+                    margin-bottom: 50px;
+                    h3 {
+                        font-size: 70px;
+                        font-family: Pb;
+                        text-transform: capitalize;
+                        text-align: center;
+                        margin-bottom: 20px;
+                        span {
+                            font-family: Pr;
+                        }
+                    }
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 50%;
+                        height: 2px;
+                        background-color: $text-cl;
+                        margin: auto;
+                        
+                    }
+                }
+               .album_img {
+                   width: 100%;
+                   margin-bottom: 50px;
+                   column-count: 3;
+                   column-gap: 5px;
+                   cursor: pointer;
+                    .item {
+                        width: 100%; 
+                        transform: translateY(100px);
+                        opacity: 0;
+                        transition: .3s;
+                        position: relative;
+                        overflow: hidden;
+                        &::after {
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-color: rgba(0,0,0,.5);
+                            display: none;
+                        }
+                        &.show {
+                            transform: translateY(0);
+                            opacity: 1;
+                        }
+                        &:hover {
+                            &::after {
+                                display: block;
+                            }
+                            .nen {
+                                &::after {
+                                    right: 50%;
+                                    transform: translate(50%,-50%);
+                                }
+                                &::before {
+                                    top: 50%;
+                                    transform: rotate(-90deg) translate(50% , -50%);
+                                }
+                            }
+                        }
+                        img {
+                            width: 100%;
+                        }
+                        .nen {
+                            &::after , &::before {
+                                content: "";
+                                display: block;
+                                width: 100px;
+                                height: 1px;
+                                background-color: white;
+                                position: absolute;
+                                z-index: 3;
+                                transition: $t;
+                            }
+                            &::after {
+                                top: 50%;
+                                right: 0%;
+                                transform: translateY(-50%) translateX(100px);
+                            }
+                            &::before {
+                                top: 0;
+                                right: 50%;
+                                transform: rotate(-90deg) translateX(100px);
+                                transform-origin: right;
+                            }
+                        }
+                    } 
+               }
+               .album_btn {
+                   text-align: center;
+                   a {
+                        display: inline-block;
+                       text-decoration: none;
+                       color: white;
+                       background-color: $text-cl;
+                       padding: 20px 40px;
+                       font-family: Rr;
+                       text-transform: capitalize;
+                       border-radius: 5px;
+                       font-size: 20px;
+                   }
+               }
+            }
+        }
+        @media (max-width: 991px) {
+            .bannerS {
+                &_box {
+                    &-item {
+                        .h2 {
+                            height: 80px;
+                            h2 {
+                                font-size: 40px;
+                            }
+                        }
+                        .p {
+                            p {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+            .nature {
+                &_img {
+                    .box {
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50% , -50%);
+                        max-width: 100%;
+                        p {
+                            font-size: 40px;
+                            margin-bottom: 30px;
+                        }
+                        span {
+                            font-size: 20px;
+                        }
+                    }
+                }
+                &_cup {
+                    position: absolute;
+                    width: 300px;
+                    height: 400px;
+                }
+            }
+            .album {
+                padding-top: 50px;
+                .container-fluid {
+                    .album_title {
+                        h3 {
+                            font-size: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: 767px) {
+            .bannerS {
+                &_box {
+                    &-item {
+                        .h2 {
+                            height: 50px;
+                            h2 {
+                                font-size: 35px;
+                            }
+                        }
+                        .p {
+                            max-width: 80%;
+                        }
+                        .animateBtn {
+                            .line {
+                                width: 50px;
+                                &.none {
+                                    width: 0;
+                                }
+                            }
+                            a {
+                                width: 150px;
+                                span {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &_control {
+                    right: 10px
+                }
+            }
+            .nature {
+                &_img {
+                    .box {
+                        width: 90%;
+                        p {
+                            font-size: 30px;
+                            margin-bottom: 20px;
+                        }
+                        span {
+                            font-size: 17px;
+                        }
+                    }
+                }
+                &_cup {
+                    position: absolute;
+                    width: 250px;
+                    height: 350px;
+                }
+            }
+            .album {
+                .container-fluid {
+                    .album_img {
+                        margin-bottom: 20px;
+                        column-count: 2;
+                        .item {
+                            display: none;
+                            &:nth-child(-n + 5) {
+                                display: block;
+                            }
+                        }
+                    }
+                    .album_btn {
+                        padding-bottom: 30px;
+                        a {
+                            padding: 10px 40px;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: 575px) {
+            .bannerS {
+                &_box {
+                    &-item {
+                        .h2 {
+                            h2 {
+                                font-size: 20px;
+                            }
+                        }
+    
+                    }
+                }
+            }
+            .album {
+                .container-fluid {
+                    .album_img {
+                        column-count: 1;
+                    }
+                }
+            }
+        }
+    }
+}

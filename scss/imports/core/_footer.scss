@@ -1,0 +1,104 @@
+// css footer
+footer {
+    background-color: $main-cl;
+    z-index: 2;
+    section {
+        background-color: unset;
+    }
+    .footer_time {
+        .container {
+            display: flex;
+            padding: 50px 0;
+            .foot_item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width:35%;
+                border: 1px solid $text-cl;
+                border-left: none;
+                padding: 30px 20px;
+                &:first-child {
+                    border-left: 1px solid $text-cl;
+                }
+                svg {
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 20px;
+                }
+                a {
+                    color: $text-cl;
+                    font-size: 30px;
+                    &:not(:last-child) {
+                        margin-right: 30px;
+                    }
+                }
+                &-info {
+                    display: flex;
+                    flex-direction: column;
+                    span {
+                        color: $text-cl;
+                        font-size: 18px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+    .footer_slogan {
+        padding: 20px 0;
+        border-top: 1px solid $text-cl;
+        h3 {
+            text-align: center;
+            font-family: PC;
+            font-size: 40px;
+            line-height: 1.5;
+            text-transform: capitalize;
+        }
+    }
+    &.footer_black {
+        background-color: black;
+        .footer_time {
+            .container {
+                .foot_item {
+                    border: 1px solid white;
+                    svg {
+                        fill: $hover-cl;
+                    }
+                    &-info {
+                        span {
+                            color: white;
+                        }
+                    }
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+        .footer_slogan {
+            border-top: 1px solid white;
+            h3 {
+                color: white;
+            }
+        }
+    }
+    @media (max-width: 991px) {
+        .footer_time {
+            .container {
+                .foot_item {
+                    padding:20px 10px;
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        .footer_time {
+            display: none;
+        }
+        .footer_slogan {
+            h3 {
+                font-size: 30px;
+            }
+        }
+    }
+}
